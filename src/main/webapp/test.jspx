@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root 
+    version="2.3" 
+    xmlns:jsp="http://xmlns.jcp.org/JSP/Page" 
+    xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+    xmlns:fmt="http://xmlns.jcp.org/jsp/jstl/fmt">
+  
+  <!-- Directives sous forme d’éléments XML -->
+  <jsp:directive.page contentType="text/html; charset=UTF-8"/>
+
+  <!-- Contenu de la page -->
+  <html>
+    <head>
+      <title>Exemple JSPX</title>
+    </head>
+    <body>
+      <h1>Bienvenue</h1>
+      <p>Date : 
+        <jsp:expression>new java.util.Date()</jsp:expression>
+      </p>
+    </body>
+  </html>
+</jsp:root>
+

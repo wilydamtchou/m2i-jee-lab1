@@ -14,7 +14,16 @@ public class LoginServlet extends HttpServlet {
     /**
 	 * 
 	 */
+	private ClientService clientService;
+	
 	private static final long serialVersionUID = 1L;
+	
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+		clientService = new ClientServiceImpl();
+	}
 
 	@Override
     protected void doPost(HttpServletRequest request,
@@ -23,7 +32,7 @@ public class LoginServlet extends HttpServlet {
         // Récupération des paramètres du formulaire
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
+     
         // Création/récupération de la session
         HttpSession session = request.getSession(true);
         session.setAttribute("username", username);
